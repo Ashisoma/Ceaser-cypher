@@ -6,7 +6,7 @@ public class App {
         Console myConsole = System.console();
         String inputText = "THE RED FOX JUMPED OVER THE LAZY DOG";
 
-//        Cipher letters = new Cipher("Hello", 2);
+
 
 
     }

@@ -7,9 +7,9 @@ public class CipherTest {
     Cipher testCypher = new Cipher("Hello", 2);
 
     @Test
-    public void newCipher_getLetter_arrayIsString() {
+    public void newCipher_getMessage_IsString() {
 
-        assertTrue(String.valueOf(true), testCypher instanceof Cipher);
+        assertTrue(testCypher instanceof Cipher);
     }
 
     @Test
@@ -18,13 +18,13 @@ public class CipherTest {
     }
 
     @Test
-    public void newCipher_checksLetter() {
+    public void newCipher_checksFor_getMessage() {
 
-        assertEquals("Hello", testCypher.getLetters() );
+        assertEquals("Hello", testCypher.getMessage() );
     }
 
     @Test
     public void newCipher_checks_encryptedMessage() {
-        assertEquals("yzabcdefghijklmnopqrstuvwx", testCypher.encryptMessage());
+        assertEquals("cdefghijklmnopqrstuvwxyzab", testCypher.encryptMessage());
     }
 }

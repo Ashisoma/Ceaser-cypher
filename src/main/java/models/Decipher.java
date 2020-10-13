@@ -1,38 +1,38 @@
-package  models;
+package models;
 
 public class Decipher {
-    private String encryptedMessage;
+    private String mEncryptedLetter;
     private int key;
-    String message = "hello";
-    String decryptedMessage = " ";
+    String Letter = "wow";
+    String DecryptedWord = " ";
 
-    public Decipher(String encryptedMessage, int ShiftKey){
-        this.encryptedMessage = encryptedMessage;
-        this.key = ShiftKey;
+    public Decipher(String EncryptedLetter, int key){
+        this.mEncryptedLetter = EncryptedLetter;
+        this.key = key;
     }
 
 
     public String getEncryptedMessage(){
-        return this.encryptedMessage;
+        return this.mEncryptedLetter;
     }
     public int getKey(){
         return this.key;
     }
 
     // looping through variable letter,getting index of each character
-    public String decryptMessage(){
-          encryptedMessage.toLowerCase();
+    public String decryptingMessage(){
+         mEncryptedLetter.toLowerCase();
 
-        for (int i = 0; i < message.length(); i++){
-            int alphas = message.indexOf(message.charAt(i));
-            int alphasIndex = (alphas - key) % 26;
-            if (alphasIndex < 0)
+        for (int i = 0; i < Letter.length(); i++){
+            int indexOfCode = Letter.indexOf(Letter.charAt(i));
+            int indexOfDecryption = (indexOfCode - key) % 26;
+            if (indexOfDecryption < 0)
             {
-                alphasIndex = message.length() + alphasIndex;
+                indexOfDecryption = Letter.length() - indexOfDecryption;
             }
-            char decryptedLetter= message.charAt(alphasIndex);
-            decryptedMessage += decryptedLetter;
+            char decryptedLetter= Letter.charAt(indexOfDecryption);
+            DecryptedWord += decryptedLetter;
         }
-        return decryptedMessage;
+        return DecryptedWord;
     }
 }

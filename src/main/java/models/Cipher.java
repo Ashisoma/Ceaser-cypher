@@ -1,32 +1,40 @@
 package models;
 
-public class Cipher {
-    private String message;
-    private int key;
+    public class Cipher {
+        private String message;
+        private int key;
 
-    public Cipher(String message, int key) {
-        this.message = message;
-        this.key = key;
+        // Instance variable to store alphabetical letters.
+        // An instance variable is a variable which is declared in a class but outside of constructors, methods, or blocks.
+        // Instance variables are created when an object is instantiated, and are accessible to all the constructors, methods, or blocks in the class
+        String letter = "abcdefghijklmnopqrstuvwxyz";
+        // array to store encrypted message
+        String encryptedMessage = " ";
 
-    }
-
-    public int getKey(){
-        return key;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-    public String encryptMessage(){
-        String encryptMessage = "";
-        String message = "abcdefghijklmnopqrstuvwxyz";
-        String encryptedMessage = message.toLowerCase();
-        for (int i = 0; i<encryptedMessage.length(); i++){
-            int alphas = message.indexOf(encryptedMessage.charAt(i));
-            int alphaText = (alphas + key) %26;
-            char encyptionAlphas = message.charAt(alphaText);
-            encryptMessage += encyptionAlphas;
+        public Cipher(String message, int Key) {
+            this.message = message;
+            this.key = Key;
         }
-         return encryptMessage;
+
+        public String getMessage() {
+            return message;
+        }
+
+        public int getKey() {
+            return key;
+        }
+
+        // Encryption Logic
+        public String encryptMessage(){
+            String encryptedText = message.toLowerCase();
+
+            for(int i = 0; i < encryptedText.length(); i++){
+                int indexOfTextBeingEncrypted = letter.indexOf(encryptedText.charAt(i));
+                int indexOfEncryption = (indexOfTextBeingEncrypted + key) % 26;
+                char decryptionPlaintext = letter.charAt(indexOfEncryption);
+                encryptedMessage += decryptionPlaintext;
+            }
+            return encryptedMessage;
+        }
     }
-}
+

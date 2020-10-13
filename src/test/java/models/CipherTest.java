@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CipherTest {
-    Cipher testCypher = new Cipher("Hello", 2);
+    Cipher testCypher = new Cipher("babyshark", 2);
 
     @Test
     public void newCipher_getMessage_IsString() {
@@ -20,11 +20,16 @@ public class CipherTest {
     @Test
     public void newCipher_checksFor_getMessage() {
 
-        assertEquals("Hello", testCypher.getMessage() );
+        assertEquals("hello", testCypher.getMessage() );
     }
 
     @Test
     public void newCipher_checks_encryptedMessage() {
-        assertEquals("cdefghijklmnopqrstuvwxyzab", testCypher.encryptMessage());
+        assertEquals("dcdaujctm", testCypher.encryptMessage());
+    }
+
+    @Test
+    public void if_getletter_returnString() {
+        assertEquals("babyshark", testCypher.encryptMessage());
     }
 }

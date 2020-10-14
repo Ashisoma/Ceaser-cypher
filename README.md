@@ -11,6 +11,16 @@
 3. Gradle
 4. Command Line interface
 
+## Contribution
+Visit the github repo on https://github.com/Ashisoma/Ceaser-cypher
+- Git clone the repo
+- Run it in your computer 
+- Make some changes and commit
+- Project is only for CLI interaction
+
+## Licence
+Mit Licence Onesmus Okali
+
 
 
 

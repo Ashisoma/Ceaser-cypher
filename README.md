@@ -22,7 +22,7 @@ Visit the github repo on https://github.com/Ashisoma/Ceaser-cypher
 - Project is only for CLI interaction
 
 ## Licence
-Mit Licence Onesmus Okali
+Mit Licence Onesmus Okali 2020
 
 
 

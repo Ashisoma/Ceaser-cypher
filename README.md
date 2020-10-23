@@ -11,6 +11,9 @@
 3. Gradle
 4. Command Line interface
 
+## Known bugs
+- The decypher key has some errors in it, the decryption is not bringing an anticipated output.
+
 ## Contribution
 Visit the github repo on https://github.com/Ashisoma/Ceaser-cypher
 - Git clone the repo
